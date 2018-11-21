@@ -1,5 +1,7 @@
 package com.smartcarpark.smartcarparking;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -80,9 +82,8 @@ public class ParkingLayout extends AppCompatActivity implements PerformNetworkRe
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject slotInfo = jsonArray.getJSONObject(i);
             if (slotInfo.getInt(Constants.API_IS_AVAILABLE) == 0) {
-                slotsMap.get(slotInfo.getString(Constants.API_SLOT_ID)).setBackgroundColor(0x550000ff);
+                slotsMap.get(slotInfo.getString(Constants.API_SLOT_ID)).getBackground().setColorFilter(Color.parseColor("#dbdbdb"), PorterDuff.Mode.DARKEN);
             }
         }
-
     }
 }

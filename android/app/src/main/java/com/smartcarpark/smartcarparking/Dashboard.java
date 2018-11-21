@@ -43,6 +43,8 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         pbBgl16 = findViewById(R.id.pb_bgl16);
         pbBgl17 = findViewById(R.id.pb_bgl17);
 
+        //pbBgl12.getProgressDrawable().
+
         tvSlotsAvailable = findViewById(R.id.tv_slots_available);
         tvBgl12 = findViewById(R.id.tv_bgl12);
         tvBgl13 = findViewById(R.id.tv_bgl13);
