@@ -98,6 +98,21 @@ $response = array();
 
            break;
 
+      case 'update_slot_info':
+
+           areParametersAvailable(array(API_ZONE_ID, API_SLOT_ID, API_IS_AVAILABLE));
+
+           $db = new DbOperation();
+
+           $result = $db -> updateSlotInfo(
+              $_POST[API_ZONE_ID],
+              $_POST[API_SLOT_ID],
+              $_POST[API_IS_AVAILABLE]
+           );
+
+           $response[ERROR_RESPONSE] = !$result;
+           break;
+
            default:
                $response[ERROR_RESPONSE] = true;
                $response[MESSAGE_RESPONSE] = 'Invalid API call';

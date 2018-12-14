@@ -2,9 +2,9 @@
 
  // DB setup
  define('DB_HOST', 'localhost');
- define('DB_USER', '1124864');
- define('DB_PASS', 'cisco123');
- define('DB_NAME', '1124864');
+ define('DB_USER', 'root');
+ define('DB_PASS', 'root');
+ define('DB_NAME', 'SmartCarSpace');
 
 //User Table
 define('TABLE_USER', 'User');
@@ -24,6 +24,7 @@ define('COL_SUPERVISOR_ID', 'Supervisor_Id');
  define('TABLE_PARKING_SLOT', 'Parking_Slot');
  define('COL_SLOT_ID', 'Slot_Id');
  define('COL_IS_AVAILABLE', 'Is_Available');
+ define('COL_TIME_OF_ARRIVAL', 'Time_Of_Arrival');
 
  //API constants
  define('API_USER_ID', 'user_id');
@@ -37,6 +38,7 @@ define('COL_SUPERVISOR_ID', 'Supervisor_Id');
  define('API_SLOT_ID', 'slot_id');
  define('API_IS_AVAILABLE', 'is_available');
  define('API_SLOTS_PER_ZONE', 'slots_per_zone');
+ define('API_TIME_OF_ARRIVAL', 'Time_Of_Arrival');
 
  //REST Response
  define('ERROR_RESPONSE', 'error');

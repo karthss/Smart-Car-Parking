@@ -50,7 +50,7 @@ class DbOperation
 
           array_push($slots, $slot);
       }
-      
+
       $result[API_SLOTS_PER_ZONE] = $slots;
 
       return $result;
@@ -76,6 +76,16 @@ class DbOperation
       $result[API_ZONES] = $zones;
 
       return $result;
+   }
+
+   function updateSlotInfo($zone_id, $slot_id, $is_available) {
+
+      $sql_statement = $this -> con -> prepare("UPDATE " . TABLE_PARKING_SLOT . " SET " . COL_IS_AVAILABLE . "=$is_available WHERE " . COL_ZONE_ID . "='$zone_id' AND " . COL_SLOT_ID . "='$slot_id'");
+      if ($sql_statement -> execute()) {
+          return true;
+      }
+      return false;
+
    }
 }
 ?>
