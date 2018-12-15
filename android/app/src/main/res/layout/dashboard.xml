@@ -70,7 +70,6 @@
                     android:layout_centerInParent="true"
                     android:background="@android:color/transparent"
                     android:gravity="center"
-                    android:text="15%"
                     android:textColor="@color/colorPrimary"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -120,7 +119,7 @@
                             android:clickable="false"
                             android:indeterminate="false"
                             android:max="100"
-                            android:progress="10"
+                            android:progress="0"
                             android:progressDrawable="@drawable/circular_progress_bar" />
 
                         <TextView
@@ -130,7 +129,6 @@
                             android:layout_centerInParent="true"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:text="15%"
                             android:textColor="@color/colorPrimary"
                             android:textSize="30sp"
                             android:textStyle="bold" />
@@ -170,7 +168,7 @@
                             android:clickable="false"
                             android:indeterminate="false"
                             android:max="100"
-                            android:progress="75"
+                            android:progress="0"
                             android:progressDrawable="@drawable/circular_progress_bar" />
 
                         <TextView
@@ -180,7 +178,6 @@
                             android:layout_centerInParent="true"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:text="75%"
                             android:textColor="@color/colorPrimary"
                             android:textSize="30sp"
                             android:textStyle="bold" />
@@ -224,7 +221,7 @@
                             android:clickable="false"
                             android:indeterminate="false"
                             android:max="100"
-                            android:progress="60"
+                            android:progress="0"
                             android:progressDrawable="@drawable/circular_progress_bar" />
 
                         <TextView
@@ -234,7 +231,6 @@
                             android:layout_centerInParent="true"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:text="60%"
                             android:textColor="@color/colorPrimary"
                             android:textSize="30sp"
                             android:textStyle="bold" />
@@ -274,7 +270,7 @@
                             android:clickable="false"
                             android:indeterminate="false"
                             android:max="100"
-                            android:progress="85"
+                            android:progress="0"
                             android:progressDrawable="@drawable/circular_progress_bar" />
 
                         <TextView
@@ -284,7 +280,6 @@
                             android:layout_centerInParent="true"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:text="85%"
                             android:textColor="@color/colorPrimary"
                             android:textSize="30sp"
                             android:textStyle="bold" />
@@ -295,14 +290,15 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center_horizontal"
                     android:background="#fdffdb"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
                     <RelativeLayout
@@ -328,7 +324,7 @@
                             android:clickable="false"
                             android:indeterminate="false"
                             android:max="100"
-                            android:progress="60"
+                            android:progress="0"
                             android:progressDrawable="@drawable/circular_progress_bar" />
 
                         <TextView
@@ -338,7 +334,6 @@
                             android:layout_centerInParent="true"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:text="60%"
                             android:textColor="@color/colorPrimary"
                             android:textSize="30sp"
                             android:textStyle="bold" />
@@ -350,8 +345,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
-                    android:gravity="center_horizontal"
                     android:background="#fdffdb"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
                     <RelativeLayout
@@ -378,7 +373,7 @@
                             android:clickable="false"
                             android:indeterminate="false"
                             android:max="100"
-                            android:progress="85"
+                            android:progress="0"
                             android:progressDrawable="@drawable/circular_progress_bar" />
 
                         <TextView
@@ -388,7 +383,6 @@
                             android:layout_centerInParent="true"
                             android:background="@android:color/transparent"
                             android:gravity="center"
-                            android:text="85%"
                             android:textColor="@color/colorPrimary"
                             android:textSize="30sp"
                             android:textStyle="bold" />

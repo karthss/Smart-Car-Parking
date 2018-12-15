@@ -162,6 +162,8 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
             totalSlots += totalSlotsPerZone;
         }
         tvSlotsAvailable.setText(getSlotsAvailableInfo(totalSlotsAvailable, totalSlots));
+        pbSlotsAvailable.setMax(totalSlots);
+        pbSlotsAvailable.setProgress(totalSlotsAvailable);
     }
 
     private String getSlotsAvailableInfo(int slotsAvailable, int totalSlots) {
