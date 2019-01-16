@@ -78,14 +78,26 @@ class DbOperation
       return $result;
    }
 
-   function updateSlotInfo($zone_id, $slot_id, $is_available) {
 
-      $sql_statement = $this -> con -> prepare("UPDATE " . TABLE_PARKING_SLOT . " SET " . COL_IS_AVAILABLE . "=$is_available WHERE " . COL_ZONE_ID . "='$zone_id' AND " . COL_SLOT_ID . "='$slot_id'");
-      if ($sql_statement -> execute()) {
-          return true;
+
+   function updateSlotInfo($zone_id, $slot_id, $is_available) {
+      $current_slot_info_sql = $this -> con -> prepare("SELECT " . COL_IS_AVAILABLE . " FROM " . TABLE_PARKING_SLOT . " WHERE " . COL_ZONE_ID . "='$zone_id' AND " . COL_SLOT_ID . "='$slot_id'");
+      $current_slot_info_sql -> execute();
+      $current_slot_info_sql -> bind_result($current_slot_info);
+      $current_slot_info_sql -> fetch();
+      echo "$current_slot_info";
+      if ($current_slot_info != $is_available) {
+        $current_slot_info_sql -> close();
+        $sql_statement_parking_slot = $this -> con -> prepare("UPDATE " . TABLE_PARKING_SLOT . " SET " . COL_IS_AVAILABLE . "=$is_available WHERE " . COL_ZONE_ID . "='$zone_id' AND " . COL_SLOT_ID . "='$slot_id'");
+        if ($sql_statement_parking_slot -> execute()) {
+            $this -> con -> query("UPDATE " . TABLE_ZONE . " SET " . COL_SLOTS_OCCUPIED . "=" . COL_SLOTS_OCCUPIED . " + $is_available - $current_slot_info WHERE " . COL_ZONE_ID . "='$zone_id'");
+            $this -> con -> query("UPDATE " . TABLE_ZONE . " SET " . COL_SLOTS_AVAILABLE . "=" . COL_SLOTS_AVAILABLE . " + $current_slot_info - $is_available WHERE " . COL_ZONE_ID . "='$zone_id'");
+            return true;
+        }
+      } else {
+        return true;
       }
       return false;
-
    }
 }
 ?>
