@@ -85,7 +85,6 @@ class DbOperation
       $current_slot_info_sql -> execute();
       $current_slot_info_sql -> bind_result($current_slot_info);
       $current_slot_info_sql -> fetch();
-      echo "$current_slot_info";
       if ($current_slot_info != $is_available) {
         $current_slot_info_sql -> close();
         $sql_statement_parking_slot = $this -> con -> prepare("UPDATE " . TABLE_PARKING_SLOT . " SET " . COL_IS_AVAILABLE . "=$is_available WHERE " . COL_ZONE_ID . "='$zone_id' AND " . COL_SLOT_ID . "='$slot_id'");
