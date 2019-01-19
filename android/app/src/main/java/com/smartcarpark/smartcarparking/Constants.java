@@ -16,7 +16,6 @@ public class Constants {
     public static final String API_PASSWORD = "password";
     public static final String API_ZONES = "zones";
     public static final String API_ZONE_ID = "zone_id";
-    public static final String API_ZONE_NAME = "zone_name";
     public static final String API_SLOTS_OCCUPIED = "slots_occupied";
     public static final String API_SLOTS_AVAILABLE = "slots_available";
     public static final String API_SLOTS_PER_ZONE = "slots_per_zone";
