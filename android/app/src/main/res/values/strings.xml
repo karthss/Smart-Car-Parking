@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Smart Car Parking</string>
+    <string name="userid">User Id</string>
+    <string name="password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="slots_available">Slots Available</string>
+    <string name="bgl12">BGL-12</string>
+    <string name="bgl13">BGL-13</string>
+    <string name="bgl14">BGL-14</string>
+    <string name="bgl15">BGL-15</string>
+    <string name="bgl16">BGL-16</string>
+    <string name="bgl17">BGL-17</string>
+</resources>

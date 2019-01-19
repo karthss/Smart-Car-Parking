@@ -81,7 +81,7 @@ public class ParkingLayout extends AppCompatActivity implements PerformNetworkRe
 
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject slotInfo = jsonArray.getJSONObject(i);
-            if (slotInfo.getInt(Constants.API_IS_AVAILABLE) == 0) {
+            if (slotInfo.getInt(Constants.API_IS_AVAILABLE) == 1) {
                 slotsMap.get(slotInfo.getString(Constants.API_SLOT_ID)).getBackground().setColorFilter(Color.parseColor("#dbdbdb"), PorterDuff.Mode.DARKEN);
             }
         }
