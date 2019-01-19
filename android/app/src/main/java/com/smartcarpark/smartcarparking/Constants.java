@@ -6,7 +6,7 @@ public class Constants {
     public static final int CODE_POST_REQUEST = 1025;
 
     //URLs
-    private static final String ROOT_URL = "http://ec2-13-232-39-50.ap-south-1.compute.amazonaws.com/php/Api.php?apicall=";
+    private static final String ROOT_URL = "http://ec2-13-232-39-50.ap-south-1.compute.amazonaws.com:3000/";
     public static final String URL_VALIDATE_USER_LOGIN = ROOT_URL + "validate_user_login";
     public static final String URL_GET_ALL_ZONES_INFO = ROOT_URL + "get_all_zones_info";
     public static final String URL_GET_SLOTS_INFO_IN_ZONE = ROOT_URL + "get_slots_info_per_zone";
