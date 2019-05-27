@@ -1,0 +1,2 @@
+# PHP
+An EC2 instance is created in AWS where the LAMP Stack is deployed. PHP scripts are loaded onto Linux VM where the API endpoints are defined and implemented. These endpoints are defined in Api.php file whereas the database operations are implemented in DbOperation.php file. 
