@@ -16,13 +16,13 @@ The Ethernet shield and the IR sensors have to be connected to Arduino (we have 
 
 **b) Python:** 
 
-In order the send the received data to cloud, we are using "telnet_to_arduino.py" which upon running sends the received data to AWS server. (Refer Python.md)
+In order the send the received data to cloud, we are using "telnet_to_arduino.py" which upon running sends the received data to AWS server. (Refer [Python.md](https://gitlab.com/HarishMSD17/smart-car-parking/blob/README/python/Python.md))
 
 ## Subsystem 2
 
 **a) EC2 Service:**
 
-An EC2 service is created in AWS where LAMP Stack (Linux, Apache, MySql, PHP) is deployed onto it. An Apache HTTP server is deployed in the Linux machine with MySql being used to handle the database management activities and PHP acting as the intermediate between Sub-system 1 and Android application that helps in fetching and storing data from/into the MySql database. (Refer PHP.md)
+An EC2 service is created in AWS where LAMP Stack (Linux, Apache, MySql, PHP) is deployed onto it. An Apache HTTP server is deployed in the Linux machine with MySql being used to handle the database management activities and PHP acting as the intermediate between Sub-system 1 and Android application that helps in fetching and storing data from/into the MySql database. (Refer [PHP.md](https://gitlab.com/HarishMSD17/smart-car-parking/blob/README/php/PHP.md))
 
 **b) Android Application:**
 
