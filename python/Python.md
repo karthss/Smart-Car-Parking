@@ -1,0 +1,2 @@
+# Python
+The python script "telnet_to_arduino.py" is made to run in PC/laptop where the Arduino is connected. The script establishes an HTTP session with AWS server to transfer live Arduino data. Arduino transfers the slot data in a specified format which the script can parse and send this information to the server whenever a slot toggles its state. 
